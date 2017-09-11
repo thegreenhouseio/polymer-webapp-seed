@@ -1,0 +1,34 @@
+{
+  "name": "polymer-webapp-seed",
+  "version": "0.1.0",
+  "description": "Polymer and webpack Seed for webapp projects in The Greenhouse",
+  "main": "src/index.js",
+  "repository": "git@github.com:thegreenhouseio/polymer-webapp-seed.git",
+  "author": "Owen Buckley <owen.buckley@analogstudios.net>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf ./build && rimraf ./reports && mkdir ./reports && mkdir ./reports/test-results",
+    "build": "eslint *.js && webpack --config ./webpack.config.prod.js --progress --profile --bail",
+    "develop": "webpack-dev-server --open --config ./webpack.config.develop.js --inline --progress",
+    "serve": "npm run clean && npm run build && http-server ./build -o"
+  },
+  "dependencies": {
+    "Polymer": "^1.6.1--"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "eslint-loader": "^1.9.0",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-md5-hash": "^0.0.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
