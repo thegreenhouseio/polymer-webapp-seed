@@ -14,7 +14,8 @@
     "serve": "npm run clean && npm run build && http-server ./build -o"
   },
   "dependencies": {
-    "Polymer": "^1.6.1--"
+    "@polymer/polymer": "^3.0.0-pre.1",
+    "webcomponentsjs": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
