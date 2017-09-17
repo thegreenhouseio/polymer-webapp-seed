@@ -103,7 +103,7 @@ This project uses Webpack as the build tool, executed via npm scripts.  All avai
 section of _package.json_
 
 ### Development
-This will start up a webpack-dev-server, which watches for changes and 'redeploys' as needed.
+This will start up [webpack-dev-server](https://webpack.js.org/configuration/dev-server/), which watches for changes and 'redeploys' as needed.
 
 
 ```
