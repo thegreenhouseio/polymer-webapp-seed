@@ -1,9 +1,21 @@
 const commonConfig = require('./webpack.config.common');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const webpackMerge = require('webpack-merge');
 
 module.exports = webpackMerge(commonConfig, {
+
+  module: {
+    rules: [
+      {
+        test: /\.(s*)css$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader']
+        })
+      }
+    ]
+  },
 
   plugins: [
     new WebpackMd5Hash(),
@@ -28,6 +40,11 @@ module.exports = webpackMerge(commonConfig, {
         yandex: true,
         windows: true
       }
+    }),
+
+    new ExtractTextPlugin({
+      filename: 'styles.[chunkhash].css',
+      allChunks: true
     })
   ]
 

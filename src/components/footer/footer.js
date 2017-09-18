@@ -1,11 +1,12 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
 
+import './footer.scss';
 import FooterTemplate from './footer.html';
 
 class CustomElement extends PolymerElement {
   constructor() {
     super();
-    this.name = 'Footer';
+    this.year = 2017;
   }
 
   static get is() {
