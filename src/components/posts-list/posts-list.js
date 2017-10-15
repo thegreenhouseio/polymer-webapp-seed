@@ -1,8 +1,7 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
-import PostsService from '../../services/posts-service';
 import moment from 'moment';
-
 import PostsListTemplate from './posts-list.html';
+import PostsService from '../../services/posts-service';
 
 class CustomElement extends PolymerElement {
   constructor() {

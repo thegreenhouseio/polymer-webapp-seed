@@ -9,6 +9,24 @@
     "@webcomponents/shadycss" "^1.0.0"
     "@webcomponents/webcomponentsjs" "^1.0.0"
 
+"@types/clone@^0.1.29":
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/@types/clone/-/clone-0.1.30.tgz#e7365648c1b42136a59c7d5040637b3b5c83b614"
+
+"@types/node@*":
+  version "8.0.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.34.tgz#55f801fa2ddb2a40dd6dfc15ecfe1dde9c129fe9"
+
+"@types/node@^6.0.0", "@types/node@^6.0.46":
+  version "6.0.89"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.89.tgz#154be0e6a823760cd6083aa8c48f952e2e63e0b0"
+
+"@types/parse5@^2.2.32":
+  version "2.2.34"
+  resolved "https://registry.yarnpkg.com/@types/parse5/-/parse5-2.2.34.tgz#e3870a10e82735a720f62d71dcd183ba78ef3a9d"
+  dependencies:
+    "@types/node" "*"
+
 "@webcomponents/shadycss@^1.0.0":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.0.5.tgz#ff8537dd06c46f33eccee082cdecd9507bf39f56"
@@ -1134,6 +1152,10 @@ clone@^1.0.0, clone@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.2.tgz#260b7a99ebb1edfe247538175f783243cb19d149"
 
+clone@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-2.1.1.tgz#d217d1e961118e3ac9a4b8bba3285553bf647cdb"
+
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -1642,6 +1664,16 @@ dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
 
+dom5@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/dom5/-/dom5-2.3.0.tgz#f8204975bd0dacbbe5b58a8a93ffc1fed0ffcd2a"
+  dependencies:
+    "@types/clone" "^0.1.29"
+    "@types/node" "^6.0.0"
+    "@types/parse5" "^2.2.32"
+    clone "^2.1.0"
+    parse5 "^2.2.2"
+
 domain-browser@^1.1.1:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
@@ -1926,7 +1958,7 @@ eslint@^4.6.1:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espree@^3.5.1:
+espree@^3.4.3, espree@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.1.tgz#0c988b8ab46db53100a1954ae4ba995ddd27d87e"
   dependencies:
@@ -2077,9 +2109,9 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-text-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
+extract-text-webpack-plugin@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.1.tgz#605a8893faca1dd49bb0d2ca87493f33fd43d102"
   dependencies:
     async "^2.4.1"
     loader-utils "^1.1.0"
@@ -3961,6 +3993,22 @@ parse-png@^1.0.0, parse-png@^1.1.1:
   dependencies:
     pngjs "^3.2.0"
 
+parse5-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/parse5-utils/-/parse5-utils-2.0.0.tgz#c926c1764e2431a450a5941f302db9beaec9d78a"
+  dependencies:
+    parse5 "^2.2.1"
+
+parse5@^2.2.1, parse5@^2.2.2:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-2.2.3.tgz#0c4fc41c1000c5e6b93d48b03f8083837834e9f6"
+
+parse5@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-3.0.2.tgz#05eff57f0ef4577fb144a79f8b9a967a6cc44510"
+  dependencies:
+    "@types/node" "^6.0.46"
+
 parseurl@~1.3.1, parseurl@~1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
@@ -4096,6 +4144,20 @@ pn@^1.0.0:
 pngjs@^3.0.0, pngjs@^3.2.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.0.tgz#1f5730c189c94933b81beda2ab2f8e2855263a8f"
+
+polymer-webpack-loader@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/polymer-webpack-loader/-/polymer-webpack-loader-2.0.0.tgz#4189780271dd24fe3a10f06f62e722b6abf9f8e2"
+  dependencies:
+    css-selector-tokenizer "^0.7.0"
+    dom5 "^2.3.0"
+    espree "^3.4.3"
+    html-loader "^0.5.1"
+    loader-utils "^1.1.0"
+    parse5 "^3.0.2"
+    parse5-utils "^2.0.0"
+    postcss "^6.0.9"
+    source-map "^0.5.6"
 
 portfinder@^1.0.13, portfinder@^1.0.9:
   version "1.0.13"
@@ -4349,6 +4411,14 @@ postcss@^6.0.1:
   dependencies:
     chalk "^2.1.0"
     source-map "^0.5.7"
+    supports-color "^4.4.0"
+
+postcss@^6.0.9:
+  version "6.0.13"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.13.tgz#b9ecab4ee00c89db3ec931145bd9590bbf3f125f"
+  dependencies:
+    chalk "^2.1.0"
+    source-map "^0.6.1"
     supports-color "^4.4.0"
 
 prelude-ls@~1.1.2:
@@ -4827,6 +4897,10 @@ sass-loader@^6.0.6:
     lodash.tail "^4.1.1"
     pify "^3.0.0"
 
+sass@^1.0.0-beta.2:
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.0.0-beta.2.tgz#910071f16ddcde0b946392aadfa12d347128eb5d"
+
 sax@>=0.6.0, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
@@ -5011,6 +5085,10 @@ source-map@^0.4.2, source-map@~0.4.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
     amdefine ">=0.0.4"
+
+source-map@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
 spdx-correct@~1.0.0:
   version "1.0.2"

@@ -1,23 +1,29 @@
-<div>
+<h2>Latest Posts</h2>
 
-  <h2>Latest Posts</h2>
+<template is="dom-repeat" items="{{posts}}">
 
-  <template is="dom-repeat" items="{{posts}}">
+  <div if="{{index}} < {{maxPosts}}" class="post">
 
-    <div v-if="index < maxPosts" class="post">
+    <h4 class="post-header">{{item.title}}
+      <span class="post-time">{{formatPostCreatedTime(item.createdTime)}}</span>
+    </h4>
 
-      <h4 class="post-header">{{item.title}}
-        <span class="post-time">{{formatPostCreatedTime(item.createdTime)}}</span>
-      </h4>
+    <details inner-h-t-m-l="{{item.summary}}" class="post-summary"></details>
 
-      <details inner-h-t-m-l="{{item.summary}}" class="post-summary"></details>
+    <!--<router-link :to="{ path: `/posts/${post.id}`}">Click for full details</router-link>-->
 
-      <!--<router-link :to="{ path: `/posts/${post.id}`}">Click for full details</router-link>-->
+    <hr/>
 
-      <hr/>
+  </div>
+</template>
 
-    </div>
+<style>
+  .post .post-header {
+    text-decoration: underline;
+  }
 
-  </template>
-
-</div>
+  .post .post-time {
+    font-size: .7em;
+    text-decoration: none;
+  }
+</style>

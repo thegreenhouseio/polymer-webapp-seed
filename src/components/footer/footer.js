@@ -1,6 +1,4 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
-
-import './footer.scss';
 import FooterTemplate from './footer.html';
 
 class CustomElement extends PolymerElement {

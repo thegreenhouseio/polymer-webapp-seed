@@ -8,7 +8,6 @@ import BootstrapTemplate from './bootstrap.html';
 class CustomElement extends PolymerElement {
   constructor() {
     super();
-    this.textContent = 'I\'m the bootstrap-element.';
   }
 
   static get is() {
