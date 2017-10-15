@@ -3,23 +3,21 @@
   <h2>Latest Posts</h2>
 
   <template is="dom-repeat" items="{{posts}}">
-    <p>Title: {{item.title}}<p>
-  </template>
 
-  <!--<div v-for="(post, index) in posts">-->
+    <div v-if="index < maxPosts" class="post">
 
-    <!--<div v-if="index < maxPosts" class="post">-->
-      <!--<h4 class="post-header">{{post.title}}-->
-        <!--<span class="post-time">[ {{ post.createdTimeFormatted }} ]</span>-->
-      <!--</h4>-->
+      <h4 class="post-header">{{item.title}}
+        <span class="post-time">{{formatPostCreatedTime(item.createdTime)}}</span>
+      </h4>
 
-      <!--<details v-html="post.summary" class="post-summary"></details>-->
+      <details inner-h-t-m-l="{{item.summary}}" class="post-summary"></details>
 
       <!--<router-link :to="{ path: `/posts/${post.id}`}">Click for full details</router-link>-->
 
-      <!--<hr/>-->
-    <!--</div>-->
+      <hr/>
 
-  <!--</div>-->
+    </div>
+
+  </template>
 
 </div>

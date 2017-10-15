@@ -1,5 +1,6 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
 import PostsService from '../../services/posts-service';
+import moment from 'moment';
 
 import PostsListTemplate from './posts-list.html';
 
@@ -11,17 +12,9 @@ class CustomElement extends PolymerElement {
     this.posts = new PostsService().getPosts();
   }
 
-  // function formatTimeForPosts(posts) {
-  //   let formattedPosts = [];
-  //
-  //   posts.forEach(post => {
-  //     post.createdTimeFormatted = _.unix(post.createdTime).format('MMMM Do YYYY, h:mm:ss a');
-  //
-  //     formattedPosts.push(post);
-  //   });
-  //
-  //   return posts;
-  // }
+  formatPostCreatedTime(createdTime) {
+    return moment.unix(createdTime).format('MMMM Do YYYY, h:mm:ss a');
+  }
 
   static get is() {
     return 'tgh-posts-list';

@@ -1,22 +1,18 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
-
-import '../../components/footer/footer';
-import '../../components/header/header';
-import '../../views/home/home';
-import BootstrapTemplate from './bootstrap.html';
+import '../../components/posts-list/posts-list';
+import HomeTemplate from './home.html';
 
 class CustomElement extends PolymerElement {
   constructor() {
     super();
-    this.textContent = 'I\'m the bootstrap-element.';
   }
 
   static get is() {
-    return 'tgh-bootstrap';
+    return 'tgh-home';
   }
 
   static get template() {
-    return BootstrapTemplate;
+    return HomeTemplate;
   }
 }
 

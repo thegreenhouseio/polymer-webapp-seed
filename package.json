@@ -16,6 +16,7 @@
   "dependencies": {
     "@polymer/polymer": "^3.0.0-pre.1",
     "bootstrap": "^4.0.0-alpha.6",
+    "moment": "^2.19.1",
     "webcomponentsjs": "^1.0.2"
   },
   "devDependencies": {
