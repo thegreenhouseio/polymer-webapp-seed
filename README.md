@@ -126,14 +126,6 @@ production version of the application.
 $ yarn run build
 ```
 
-### Continuous Integration
-Jenkins runs three scripts together (_bin/build.sh_) that lints non TS files, runs unit tests, and builds the application
-```bash
-$ yarn run clean
-$ yarn run test
-$ yarn run build
-```
-
 ### Demo
 To serve a production build locally , like for a demo run:
 

@@ -2,6 +2,7 @@ import { Element as PolymerElement } from '../../../node_modules/@polymer/polyme
 
 import '../../components/footer/footer';
 import '../../components/header/header';
+import '../../components/posts-list/posts-list';
 import BootstrapTemplate from './bootstrap.html';
 
 class CustomElement extends PolymerElement {

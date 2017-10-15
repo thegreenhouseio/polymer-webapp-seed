@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -50,6 +51,10 @@ module.exports = {
       template: './index.html',
       chunksSortMode: 'dependency'
     })
+
+    // new ScriptExtHtmlWebpackPlugin({
+    //   defaultAttribute: 'module'
+    // })
 
   ]
 };
