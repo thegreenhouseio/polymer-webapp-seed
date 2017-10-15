@@ -1,6 +1,5 @@
 import { Element as PolymerElement } from '../../../node_modules/@polymer/polymer/polymer-element.js';
-import { DomRepeat } from '../../../node_modules/@polymer/polymer/lib/elements/dom-repeat'; // eslint-disable-line
-// import PostsService from '../../services/posts-service';
+import PostsService from '../../services/posts-service';
 
 import PostsListTemplate from './posts-list.html';
 
@@ -9,12 +8,7 @@ class CustomElement extends PolymerElement {
     super();
 
     this.maxPosts = 2;
-    this.posts = [];
-    this.posts.push({
-      title: 'title 1'
-    });
-    // this.set('posts', []); // [{ title: 'title 1' }]); // new PostsService().getPosts(); // formatTimeForPosts(posts)
-    // this.set('posts', [{ title: 'title 1' }]);
+    this.posts = new PostsService().getPosts();
   }
 
   // function formatTimeForPosts(posts) {

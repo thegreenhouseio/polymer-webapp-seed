@@ -1,13 +1,10 @@
-
 <div>
 
   <h2>Latest Posts</h2>
 
-  <p>Max Posts: {{maxPosts}}</p>
-  <pre>[[posts[0].title]]</pre>
-  <pre>{{posts[0].title}}</pre>
-
-  <template is="dom-repeat" items="[[posts]]">{{post.title}}</template>
+  <template is="dom-repeat" items="{{posts}}">
+    <p>Title: {{item.title}}<p>
+  </template>
 
   <!--<div v-for="(post, index) in posts">-->
 
