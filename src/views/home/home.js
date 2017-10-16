@@ -5,6 +5,26 @@ import HomeTemplate from './home.html';
 class CustomElement extends PolymerElement {
   constructor() {
     super();
+
+    this.form = {
+      name: ''
+    };
+  }
+
+  submitForm() {
+    console.log('onFormSubmit', this.form); // eslint-disable-line
+    return false;
+  }
+
+  resetForm() {
+    console.log('resetForm', this.form); // eslint-disable-line
+    this.form = {
+      name: ''
+    };
+  }
+
+  shouldDisplayGreeting() {
+    return this.name !== '';
   }
 
   static get is() {
