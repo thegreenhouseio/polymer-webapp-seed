@@ -103,7 +103,7 @@ This project uses Webpack as the build tool, executed via npm scripts.  All avai
 section of _package.json_
 
 ### Development
-This will start up a webpack-dev-server, which watches for changes and 'redeploys' as needed.
+This will start up [webpack-dev-server](https://webpack.js.org/configuration/dev-server/), which watches for changes and 'redeploys' as needed.
 
 
 ```
@@ -123,14 +123,6 @@ production version of the application.
 **Note: This task exports** `NODE_ENV=production` by the use of using webpack's `-p` flag
 
 ```
-$ yarn run build
-```
-
-### Continuous Integration
-Jenkins runs three scripts together (_bin/build.sh_) that lints non TS files, runs unit tests, and builds the application
-```bash
-$ yarn run clean
-$ yarn run test
 $ yarn run build
 ```
 
