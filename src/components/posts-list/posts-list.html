@@ -2,19 +2,20 @@
 
 <template is="dom-repeat" items="{{posts}}">
 
-  <div if="{{index}} < {{maxPosts}}" class="post">
+  <template is="dom-if" if="{{shouldShowPost(index)}}" class="post">
 
     <h4 class="post-header">{{item.title}}
       <span class="post-time">{{formatPostCreatedTime(item.createdTime)}}</span>
     </h4>
 
+    <!-- inner-h-t-m-l is a hack it seems -->
     <details inner-h-t-m-l="{{item.summary}}" class="post-summary"></details>
 
     <!--<router-link :to="{ path: `/posts/${post.id}`}">Click for full details</router-link>-->
 
     <hr/>
 
-  </div>
+  </template>
 </template>
 
 <style>

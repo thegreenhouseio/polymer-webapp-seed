@@ -15,6 +15,10 @@ class CustomElement extends PolymerElement {
     return moment.unix(createdTime).format('MMMM Do YYYY, h:mm:ss a');
   }
 
+  shouldShowPost(index) {
+    return index < this.maxPosts;
+  }
+
   static get is() {
     return 'tgh-posts-list';
   }
