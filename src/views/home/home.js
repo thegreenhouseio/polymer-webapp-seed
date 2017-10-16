@@ -11,20 +11,16 @@ class CustomElement extends PolymerElement {
     };
   }
 
-  submitForm() {
-    console.log('onFormSubmit', this.form); // eslint-disable-line
-    return false;
+  submitForm(event) {
+    console.debug('onFormSubmit', this.form); // eslint-disable-line
+    event.preventDefault();
   }
 
   resetForm() {
-    console.log('resetForm', this.form); // eslint-disable-line
+    console.debug('resetForm', this.form); // eslint-disable-line
     this.form = {
       name: ''
     };
-  }
-
-  shouldDisplayGreeting() {
-    return this.name !== '';
   }
 
   static get is() {
